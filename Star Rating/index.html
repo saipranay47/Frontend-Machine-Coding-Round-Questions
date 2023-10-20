@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating Component</title>
+    <style>
+        .star-rating {
+            display: flex;
+            font-size: 0;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+        .star-rating input {
+            display: none;
+        }
+        .star-rating label {
+            font-size: 30px;
+            cursor: pointer;
+            color: #cccccc; 
+        }
+        .star-rating label:hover,
+        .star-rating label:hover ~ label{
+          color: rgba(255, 166, 0, 0.527);
+        }
+        .star-rating input:checked ~ label{
+            color: orange;
+        }
+        .rating {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="star-rating">
+        <input type="radio" name="rating" id="star5" value="5">
+        <label for="star5">&#9733</label>
+        <input type="radio" name="rating" id="star4" value="4">
+        <label for="star4">&#9733</label>
+        <input type="radio" name="rating" id="star3" value="3">
+        <label for="star3">&#9733</label>
+        <input type="radio" name="rating" id="star2" value="2">
+        <label for="star2">&#9733</label>
+        <input type="radio" name="rating" id="star1" value="1">
+        <label for="star1">&#9733</label>
+    </div>
+    <div class="rating">Your rating: <span id="selectedRating">Not rated</span></div>
+
+    <script>
+        const starInputs = document.querySelectorAll('.star-rating input');
+        const selectedRating = document.getElementById('selectedRating');
+
+        starInputs.forEach(input => {
+            input.addEventListener('click', function () {
+                selectedRating.textContent = this.value + ' stars';
+            });
+        });
+    </script>
+</body>
+</html>
