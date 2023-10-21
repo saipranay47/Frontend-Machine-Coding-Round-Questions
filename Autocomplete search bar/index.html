@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typeahead/ autocomplete search bar</title>
+  </head>
+  <style>
+    #search-bar {
+      width: 300px;
+      padding: 10px;
+    }
+
+    #suggestions-container {
+      position: absolute;
+      width: 300px;
+      max-height: 150px;
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      background-color: white;
+    }
+  </style>
+  <body>
+    <input type="text" id="search-bar" placeholder="Search" />
+    <div id="suggestions-container"></div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
