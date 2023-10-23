@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Infinite Scroll Example</title>
+    <style>
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .loader {
+        text-align: center;
+      }
+
+      .post {
+        padding: 50px;
+        background: #000;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .end-message {
+        text-align: center;
+        padding: 20px;
+        margin-bottom: 20px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="data-container"></div>
+    <div class="loader" id="loader">loading...</div>
+    <div class="end-message" id="end-message">You have reached the end.</div>
+  </body>
+  <script src="main.js"></script>
+</html>
